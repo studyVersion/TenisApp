@@ -8,7 +8,13 @@ public class Periodista {
 	Map<String,Equipo> listaEquipos = new HashMap<>();
 	
 	Map<String,Jugador> listaJugadores = new HashMap<>();
-     
+	
+	
+	public Periodista()
+	{
+		listaEquipos = new HashMap<>();
+		listaJugadores = new HashMap<>();
+	}
 	/*
 	 * Metodo para contabilizar puntos ganadores
 	 * 
@@ -20,6 +26,11 @@ public class Periodista {
 	 * 
 	 * Medodo para muestrar stats Equipo
 	 * */
-	
+	public int contaPuntos(String nombreJug) {
+		
+		
+		return 0;
+		
+	}
 	
 }
