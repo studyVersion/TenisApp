@@ -114,12 +114,19 @@ public class Main {
 	             System.out.println("El jugador no existe");
                  }break;
                  
-		case 4 : System.out.println("* stats of player *");
-		         System.out.println("Nombre:");
+		case 4 : System.out.println("* MUESTRA ESTADISTICAS JUGADOR *");
+		         System.out.println("Nombre del jugador:");
 		         jugador = sc.nextLine().toLowerCase().trim();
 		         String stats = match.statsJug(jugador);
-		         System.out.println(stats);
-		case 5 :
+		         
+		         if(stats.length()>0) {
+		        	    
+		        	    System.out.println(stats);
+		         }else {
+		        	    System.out.println("Jugador no existe!");
+		         }break;
+		         
+		case 5 : 
 		}
 		
      	}
