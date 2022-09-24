@@ -1,3 +1,4 @@
+import java.util.Objects;
 
 public class Jugador {
        
@@ -13,12 +14,12 @@ public class Jugador {
    }
      
 	  
-	public Jugador(String jugNombre, int puntosGanadores, int erroresNoFuerzados, int saquesDirectos) {
+	public Jugador(String jugNombre) {
 	
 	this.jugNombre = jugNombre;
-	this.puntosGanadores = puntosGanadores;
-	this.erroresNoFuerzados = erroresNoFuerzados;
-	this.saquesDirectos = saquesDirectos;
+	this.puntosGanadores = 0;
+	this.erroresNoFuerzados = 0;
+	this.saquesDirectos = 0;
 }
 
 
@@ -59,8 +60,23 @@ public class Jugador {
 
 	@Override
 	public String toString() {
-		return "Jugador [jugNombre=" + jugNombre + ", puntosGanadores=" + puntosGanadores + ", erroresNoFuerzados="
-				+ erroresNoFuerzados + ", saquesDirectos=" + saquesDirectos + "]";
+		return "Nombre y Apellido: " + jugNombre + "\nPuntos Ganadores: " + puntosGanadores + "\nErrores No Fuerzados:"
+				+ erroresNoFuerzados + "\nSaques Directos: " + saquesDirectos ;
+	}
+
+
+	
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Jugador other = (Jugador) obj;
+		return erroresNoFuerzados == other.erroresNoFuerzados && Objects.equals(jugNombre, other.jugNombre)
+				&& puntosGanadores == other.puntosGanadores && saquesDirectos == other.saquesDirectos;
 	}
 	
 	

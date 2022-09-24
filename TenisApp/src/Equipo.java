@@ -4,7 +4,7 @@ public class Equipo {
 	
 	private String nombreEquipo;
 	private Jugador primero;
-	private Jugador secondo;
+	private Jugador segundo;
 	
 	
 	public Equipo() {
@@ -15,7 +15,7 @@ public class Equipo {
         
 		this.nombreEquipo = nombreEquipo;
 		this.primero = primero;
-		this.secondo = secondo;
+		this.segundo = secondo;
 	}
 
 	public String getNombreEquipo() {
@@ -35,16 +35,17 @@ public class Equipo {
 	}
 
 	public Jugador getSecondo() {
-		return secondo;
+		return segundo;
 	}
 
 	public void setSecondo(Jugador secondo) {
-		this.secondo = secondo;
+		this.segundo = secondo;
 	}
 
 	@Override
 	public String toString() {
-		return "Equipo [nombreEquipo=" + nombreEquipo + ", primero=" + primero + ", secondo=" + secondo + "]";
+		String info = "Equipo: " + nombreEquipo + "\nPrimer Jugador 1:\n" + primero + "\n Segundo Jugador:\n" + segundo ;;
+		return info;
 	}
 	
 	
