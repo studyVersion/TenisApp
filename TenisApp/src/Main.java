@@ -2,16 +2,6 @@ import java.util.Scanner;
 
 public class Main {
 
-	/*
-	 * 
-	 * 
- 
-1. Contabiliza punto ganador
-2. Contabiliza error no forzado
-3. Contabiliza saque directo
-4. Muestra estadísticas jugador
-5. Muestra estadísticas equipo
-	 */
 	public static void menu() {
 		System.out.println("\n Estadisticas");
 		System.out.println("---------------");
