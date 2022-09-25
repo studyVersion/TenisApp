@@ -24,7 +24,6 @@ public class Partido {
 	 * Medodo para muestrar stats Equipo
 	 * */
 	public int addJugador (Jugador u) {
-		//Jugador u = new Jugador(name);
 	    int codigo = 0;
 	    String nombre = u.getJugNombre();
 	    if (!listaJugadores.containsKey(nombre)) {
