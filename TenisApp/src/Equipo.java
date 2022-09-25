@@ -44,7 +44,10 @@ public class Equipo {
 
 	@Override
 	public String toString() {
-		String info = "Equipo: " + nombreEquipo + "\nPrimer Jugador 1:\n" + primero + "\n Segundo Jugador:\n" + segundo ;;
+		String info = "Equipo: " + nombreEquipo 
+				   + "\nPuntos Ganadores: " + (primero.getPuntosGanadores()+segundo.getPuntosGanadores()) 
+		           + "\nErrores No Fuerzados: "+(primero.getErroresNoFuerzados()+segundo.getErroresNoFuerzados())
+		           + "\nSaques Directos: "+ (primero.getSaquesDirectos()+segundo.getSaquesDirectos());
 		return info;
 	}
 	

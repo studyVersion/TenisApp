@@ -57,7 +57,7 @@ public class Partido {
 		
 		for(Entry<String, Jugador> jug : listaJugadores.entrySet()) {
 	     codigo = 0;
-	     if (jug.getKey().contains(nombreJug)) {
+	     if (jug.getKey().equals(nombreJug)) {
 			
 			int puntos = jug.getValue().getPuntosGanadores();
 			puntos = puntos + 1;
@@ -80,7 +80,7 @@ public class Partido {
 			int puntos = jug.getValue().getErroresNoFuerzados();
 			puntos = puntos + 1;
 			
-			jug.getValue().setPuntosGanadores(puntos);
+			jug.getValue().setErroresNoFuerzados(puntos);
 			break;
 			
 		 }else {codigo = -1;}
@@ -96,10 +96,10 @@ public class Partido {
 			codigo = 0;
 			if (jug.getKey().contains(nombreJug)) {
 			
-			int puntos = jug.getValue().getErroresNoFuerzados();
+			int puntos = jug.getValue().getSaquesDirectos();
 			puntos = puntos + 1;
 			
-			jug.getValue().setPuntosGanadores(puntos);
+			jug.getValue().setSaquesDirectos(puntos);
 			break;
 			
 		 }else {codigo = -1;}
@@ -110,15 +110,33 @@ public class Partido {
 	}
 	
 	public String statsJug(String nombreJug) {
-		
-	String stats ="";
+	    String stats ="";
+		 
 		for(Entry<String, Jugador> jug : listaJugadores.entrySet()) {
 			
 			if (jug.getKey().equals(nombreJug)) {
 				stats = jug.getValue().toString();
+				break;
 			
-		 }else { stats = ""; }
+	   	   }else { stats =""; }
        }
 		return stats;
-   }
+		
+   }//statsJug
+	
+	public String statsEquipo(String nombreEquipo) {
+		String stats ="";
+		
+		for (Entry<String, Equipo> equipo : listaEquipos.entrySet() ) {
+			if (equipo.getKey().equals(nombreEquipo)) {
+				stats = equipo.getValue().toString();
+				break;
+				
+			}else {stats ="";}
+		}
+		
+		
+		return stats;
+		
+	}//statsEqipo
 }

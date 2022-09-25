@@ -83,14 +83,14 @@ public class Main {
 			
 		menu();
 		int option = Integer.valueOf(sc.nextLine());
-		String jugador="";
+		String value="";
 		switch(option) {
 		
 		case 1 : System.out.println("* CONTABILIZA PUNTO GANADOR *");
 			     System.out.println("Nombre del jugador:");
-		         jugador = sc.nextLine().toLowerCase().trim();
+		         value = sc.nextLine().toLowerCase().trim();
 		    
-		         codigo = match.contaPuntos(jugador);
+		         codigo = match.contaPuntos(value);
 		         
 		         if (codigo == -1) {
 		        	 System.out.println("El jugador no existe");
@@ -98,8 +98,8 @@ public class Main {
 		         
 		case 2 : System.out.println("* CONTABILIZA ERROR NO FURZADO *");
 	             System.out.println("Nombre del jugador:");
-                 jugador = sc.nextLine().toLowerCase().trim();
-                 codigo = match.contaError(jugador);
+                 value = sc.nextLine().toLowerCase().trim();
+                 codigo = match.contaError(value);
          
                  if (codigo == -1) {
         	     System.out.println("El jugador no existe");
@@ -107,26 +107,39 @@ public class Main {
                  
 		case 3 : System.out.println("* CONTABILIZA SAQUE DIRECTO *");
                  System.out.println("Nombre del jugador:");
-                 jugador = sc.nextLine().toLowerCase().trim();
-                 codigo = match.contaSaque(jugador);
+                 value = sc.nextLine().toLowerCase().trim();
+                 codigo = match.contaSaque(value);
 
                  if (codigo == -1) {
 	             System.out.println("El jugador no existe");
                  }break;
                  
 		case 4 : System.out.println("* MUESTRA ESTADISTICAS JUGADOR *");
-		         System.out.println("Nombre del jugador:");
-		         jugador = sc.nextLine().toLowerCase().trim();
-		         String stats = match.statsJug(jugador);
+		         System.out.println("Nombre del Jugador:");
+		         value = sc.nextLine().toLowerCase().trim();
+		         String stats = match.statsJug(value);
 		         
-		         if(stats.length()>0) {
-		        	    
-		        	    System.out.println(stats);
+		         
+		         
+		         if (stats.length() > 0) {
+		        	 
+		        	  System.out.println(stats);
+		        	  
 		         }else {
 		        	    System.out.println("Jugador no existe!");
 		         }break;
 		         
-		case 5 : 
+		case 5 : System.out.println("* MUESTRA ESTADISTICAS EQUIPO *");
+		         System.out.println("Nombre del Equipo:");
+		         value = sc.nextLine().toLowerCase().trim();
+		         stats = match.statsEquipo(value);
+		         
+		         if (stats.length() > 0) {
+		        	 
+		        	 System.out.println(stats);
+		         }else {
+		        	 System.out.println("Equipo no existe!");
+		         }
 		}
 		
      	}

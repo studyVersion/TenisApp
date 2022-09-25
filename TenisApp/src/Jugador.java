@@ -60,7 +60,7 @@ public class Jugador {
 
 	@Override
 	public String toString() {
-		return "Nombre y Apellido: " + jugNombre + "\nPuntos Ganadores: " + puntosGanadores + "\nErrores No Fuerzados:"
+		return "\nNombre y Apellido: " + jugNombre + "\nPuntos Ganadores: " + puntosGanadores + "\nErrores No Fuerzados:"
 				+ erroresNoFuerzados + "\nSaques Directos: " + saquesDirectos ;
 	}
 
