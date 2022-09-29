@@ -1,14 +1,16 @@
+import java.util.HashMap;
+import java.util.Map;
 
 public class Equipo {
 
-	
+	Map<String,Jugador> listaJugadores = new HashMap<>();
 	private String nombreEquipo;
 	private Jugador primero;
 	private Jugador segundo;
 	
 	
 	public Equipo() {
-		
+		listaJugadores = new HashMap<>();
 	}
 	
 	public Equipo(String nombreEquipo, Jugador primero, Jugador secondo) {
@@ -16,6 +18,7 @@ public class Equipo {
 		this.nombreEquipo = nombreEquipo;
 		this.primero = primero;
 		this.segundo = secondo;
+		listaJugadores = new HashMap<>();
 	}
 
 	public String getNombreEquipo() {

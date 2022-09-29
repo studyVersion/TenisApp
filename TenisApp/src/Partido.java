@@ -7,14 +7,14 @@ public class Partido {
 	
 	
 	Map<String,Equipo> listaEquipos = new HashMap<>();
+	Equipo e = new Equipo();
 	
-	Map<String,Jugador> listaJugadores = new HashMap<>();
 	
 	
 	public Partido()
 	{
 		listaEquipos = new HashMap<>();
-		listaJugadores = new HashMap<>();
+		e = new Equipo();
 	}
 	/*
 	
@@ -26,8 +26,8 @@ public class Partido {
 	public int addJugador (Jugador u) {
 	    int codigo = 0;
 	    String nombre = u.getJugNombre();
-	    if (!listaJugadores.containsKey(nombre)) {
-	    	listaJugadores.put(nombre, u);
+	    if (!e.listaJugadores.containsKey(nombre)) {
+	    	e.listaJugadores.put(nombre, u);
 	    }else {
 	    	codigo = -1;
 	    }
@@ -54,7 +54,8 @@ public class Partido {
 	public int contaPuntos(String nombreJug) {
 		int codigo = 0 ;
 		
-		for(Entry<String, Jugador> jug : listaJugadores.entrySet()) {
+		
+		for(Entry<String, Jugador> jug : e.listaJugadores.entrySet()) {
 	     codigo = 0;
 	     if (jug.getKey().equals(nombreJug)) {
 			
@@ -72,7 +73,7 @@ public class Partido {
 	public int contaError(String nombreJug) {
       int codigo = 0 ;
 		
-		for(Entry<String, Jugador> jug : listaJugadores.entrySet()) {
+		for(Entry<String, Jugador> jug : e.listaJugadores.entrySet()) {
 			codigo = 0;
 			if (jug.getKey().contains(nombreJug)) {
 			
@@ -91,7 +92,7 @@ public class Partido {
 	public int contaSaque(String nombreJug) {
 		int codigo = 0 ;
 		
-		for(Entry<String, Jugador> jug : listaJugadores.entrySet()) {
+		for(Entry<String, Jugador> jug : e.listaJugadores.entrySet()) {
 			codigo = 0;
 			if (jug.getKey().contains(nombreJug)) {
 			
@@ -111,7 +112,7 @@ public class Partido {
 	public String statsJug(String nombreJug) {
 	    String stats ="";
 		 
-		for(Entry<String, Jugador> jug : listaJugadores.entrySet()) {
+		for(Entry<String, Jugador> jug : e.listaJugadores.entrySet()) {
 			
 			if (jug.getKey().equals(nombreJug)) {
 				stats = jug.getValue().toString();

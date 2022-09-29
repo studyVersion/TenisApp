@@ -30,6 +30,7 @@ public class Main {
 		System.out.println("\nIntroduzca el nombre del equipo "+(i+1)+": ");
 		equipoName = sc.nextLine().toLowerCase().trim();
 		
+		
 		System.out.println("Jugador 1:");
 		jugUno = sc.nextLine().toLowerCase().trim();
 		Jugador uno = new Jugador(jugUno);
@@ -63,8 +64,8 @@ public class Main {
 	       }
 		  
 		 match.addEquipo(equipoName,uno , dos);
-		//System.out.println(match.listaEquipos.values());
-	 		//System.out.println(match.listaJugadores);
+		 
+		 
 		}
 		
 		 
