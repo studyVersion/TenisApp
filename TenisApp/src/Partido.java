@@ -47,7 +47,7 @@ public class Partido {
 			equipoUno.addEstadisticas(option, nombreJug);
 			codigo = 0;
 		}else if (equipoDos.jugNombreExiste(nombreJug)) {
-			equipoDos.addEstadisticas(codigo, nombreJug);
+			equipoDos.addEstadisticas(option, nombreJug);
 			codigo = 0;
 		}
 		
