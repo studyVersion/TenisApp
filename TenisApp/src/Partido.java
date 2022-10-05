@@ -4,12 +4,12 @@ import java.util.Map.Entry;
 
 public class Partido {
 
-	// Map<String,Equipo> listaEquipos = new HashMap<>();
+
 	private Equipo equipoUno;
 	private Equipo equipoDos;
 
 	public Partido(String nombreEqUno, String nombreEqDos, String j1, String j2, String j3, String j4) {
-		
+
 		this.equipoUno = new Equipo(nombreEqUno, j1, j2);
 		this.equipoDos = new Equipo(nombreEqDos, j3, j4);
 	}
@@ -40,18 +40,18 @@ public class Partido {
 		return stats;
 
 	}// statsEqipo
-	
+
 	public int addEstadisticas(int option, String nombreJug) {
 		int codigo = -1;
 		if (equipoUno.jugNombreExiste(nombreJug)) {
 			equipoUno.addEstadisticas(option, nombreJug);
 			codigo = 0;
-		}else if (equipoDos.jugNombreExiste(nombreJug)) {
+		} else if (equipoDos.jugNombreExiste(nombreJug)) {
 			equipoDos.addEstadisticas(option, nombreJug);
 			codigo = 0;
 		}
-		
+
 		return codigo;
-		
-	}//addEstadisticas
+
+	}// addEstadisticas
 }

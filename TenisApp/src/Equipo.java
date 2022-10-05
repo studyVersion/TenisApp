@@ -10,7 +10,7 @@ public class Equipo {
 		this.nombreEquipo = nombreEquipo;
 		this.primero = new Jugador(nombreJugUno);
 		this.segundo = new Jugador(nombreJugDos);
-		
+
 	}
 
 	public String getNombreEquipo() {
@@ -71,7 +71,7 @@ public class Equipo {
 		}
 		return codigo;
 
-	}
+	}// addEstadisticas
 
 	public String statsJug(String nombreJug) {
 		String value = "";
@@ -81,7 +81,8 @@ public class Equipo {
 			value = segundo.toString();
 		}
 		return value;
-	}
+
+	}// statsJug
 
 	public boolean jugNombreExiste(String nombreJug) {
 		boolean fact = false;
@@ -92,7 +93,8 @@ public class Equipo {
 			fact = true;
 		}
 		return fact;
-	}
+
+	}// jugNombreExiste
 
 	@Override
 	public String toString() {

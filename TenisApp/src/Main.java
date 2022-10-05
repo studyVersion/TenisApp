@@ -13,7 +13,6 @@ public class Main {
 		System.out.println("6. Salir");
 	}
 
-
 	public static void main(String[] args) {
 
 		Scanner sc = new Scanner(System.in);
@@ -39,21 +38,19 @@ public class Main {
 		String jugQuatro = sc.nextLine().toLowerCase().trim();
 
 		match = new Partido(equipo1, equipo2, jugUno, jugDos, jugTres, jugQuatro);
-	
 
 		// abrir el menú con las opciones
-		
+
 		while (option != 6) {
 
 			menu();
-			
+
 			option = Integer.valueOf(sc.nextLine());
 
 			if (option == 1) {
 				System.out.println("* CONTABILIZA PUNTO GANADOR *");
 				System.out.println("Nombre del jugador:");
 				value = sc.nextLine().toLowerCase().trim();
-
 				codigo = match.addEstadisticas(option, value);
 
 				if (codigo == -1) {
@@ -90,7 +87,7 @@ public class Main {
 				String stats = match.statsJug(value);
 				System.out.println(stats);
 
-				if (stats.length() < 0) {
+				if (stats.length() == 0) {
 					System.out.println("Jugador no existe!");
 				}
 			}
@@ -101,7 +98,8 @@ public class Main {
 				value = sc.nextLine().toLowerCase().trim();
 				String stats = match.statsEquipo(value);
 				System.out.println(stats);
-				if (stats.length() < 0) {
+				
+				if (stats.length() == 0) {
 					System.out.println("Equipo no existe!");
 				}
 			}
